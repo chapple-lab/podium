@@ -7,7 +7,7 @@ Description: An extension of the popular Xcms LC/GC-MS data analysis package.  A
 		where the labeled portion of the tracer molecule remains intact. Currently depends on Rcpp 0.11.0
 Maintainer: Cole Wunderlich <cole.wunderlich+compbio@gmail.com>
 Depends: R (>= 3.0.2), methods, mzR (>= 1.1.6), BiocGenerics, Biobase
-Suggests:
+Suggests: multtest
 Enhances:
 Description: Modified version of XCMS
 License: GPL (>= 2) + file LICENSE
