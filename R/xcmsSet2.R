@@ -1273,7 +1273,7 @@ setMethod("diffreport2","xcmsSet2", function(object,resultsPath=NULL,type,tTest,
 	#}
 	
 	
-	cat("\n\nGenerating Report for:",class1,"and",class2,".\n")
+	cat("\n\nGenerating Report for:",class1,"and",class2,"\n")
 	report = diffreport(object,groupnames = labelData[,"groupname"],class1=class1,class2=class2,filebase = filebase, eicmax = eicmax, eicwidth = eicwidth,
                                              sortpval = sortpval, classeic = classeic,value = value, metlin = FALSE,
                                              h = 480, w = 640, mzdec=2,ppm=50,...)
