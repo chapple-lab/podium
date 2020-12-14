@@ -1,4 +1,4 @@
-useDynLib(coleXcms)
+useDynLib(podium)
 
 import("methods")
 importFrom("graphics", "plot", "image")

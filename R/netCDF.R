@@ -6,7 +6,7 @@ netCDFStrError <- function(ncerr) {
        as.integer(ncerr),
        as.integer(buflen),
        out = paste(rep(" ", buflen), collapse = ""),
-       PACKAGE = "coleXcms")$out
+       PACKAGE = "podium")$out
 }
 
 netCDFIsFile <- function(filename) {
@@ -25,7 +25,7 @@ netCDFOpen <- function(filename) {
                  as.character(filename),
                  ncid = integer(1),
                  status = integer(1),
-                 PACKAGE = "coleXcms")
+                 PACKAGE = "podium")
 
     if (result$status)
         return(structure(result$status,
@@ -39,7 +39,7 @@ netCDFClose <- function(ncid) {
     result <- .C("NetCDFClose",
                  as.integer(ncid),
                  status = integer(1),
-                 PACKAGE = "coleXcms")
+                 PACKAGE = "podium")
 
     if (result$status)
         return(structure(result$status,
@@ -55,7 +55,7 @@ netCDFVarID <- function(ncid, var) {
                  as.character(var),
                  id = integer(1),
                  status = integer(1),
-                 PACKAGE = "coleXcms")
+                 PACKAGE = "podium")
 
     if (result$status)
         return(structure(result$status,
@@ -74,7 +74,7 @@ netCDFVarLen <- function(ncid, var) {
                  as.integer(var),
                  len = integer(1),
                  status = integer(1),
-                 PACKAGE = "coleXcms")
+                 PACKAGE = "podium")
 
     if (result$status)
         return(structure(result$status,
@@ -100,7 +100,7 @@ netCDFVarDouble <- function(ncid, var) {
        as.integer(var),
        data = double(len),
        status = integer(1),
-       DUP = FALSE, PACKAGE = "coleXcms")$data
+       DUP = FALSE, PACKAGE = "podium")$data
 }
 
 netCDFVarInt <- function(ncid, var) {
@@ -120,7 +120,7 @@ netCDFVarInt <- function(ncid, var) {
        as.integer(var),
        data = integer(len),
        status = integer(1),
-       DUP = FALSE, PACKAGE = "coleXcms")$data
+       DUP = FALSE, PACKAGE = "podium")$data
 }
 
 netCDFMSPoints <- function(ncid, scanIndex) {
@@ -143,7 +143,7 @@ netCDFMSPoints <- function(ncid, scanIndex) {
        massValues = double(len),
        intensityValues = double(len),
        status = integer(1),
-       DUP = FALSE, PACKAGE = "coleXcms")[c("massValues", "intensityValues")]
+       DUP = FALSE, PACKAGE = "podium")[c("massValues", "intensityValues")]
 }
 
 netCDFRawData <- function(ncid) {

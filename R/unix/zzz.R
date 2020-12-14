@@ -14,5 +14,5 @@
 
 .onUnload <- function(libpath) {
     mzR:::rampCloseAll()
-    library.dynam.unload("coleXcms", libpath)
+    library.dynam.unload("podium", libpath)
 }

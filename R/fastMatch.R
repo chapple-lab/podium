@@ -19,7 +19,7 @@ fastMatch <- function(x,y,tol=0.001, symmetric=FALSE) {
     if (!is.integer(yidx))
         yidx <- as.integer(yidx)
 
-    fm <- .Call("fastMatch", xs, ys, xidx, yidx, as.integer(length(x)), as.double(tol) , PACKAGE ='coleXcms' )
+    fm <- .Call("fastMatch", xs, ys, xidx, yidx, as.integer(length(x)), as.double(tol) , PACKAGE ='podium' )
     fm2 <- vector("list", length=length(fm))
     ##stop("!")
     if (symmetric){

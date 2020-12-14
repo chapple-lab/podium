@@ -289,7 +289,7 @@ xcmsParallelSetup <- function(nSlaves) {
 ##
 
 findPeaksPar <- function(arg) {
-    require(coleXcms) ##Modified!!
+    require(podium) ##Modified!!
 
     params <- arg$params
     myID <- arg$id
@@ -320,7 +320,7 @@ findPeaksPar <- function(arg) {
 
 
 findPeaksPar2 <- function(arg) {
-    require(coleXcms) #modified
+    require(podium) #modified
 
     params <- arg$params
     myID <- arg$id
@@ -355,7 +355,7 @@ findPeaksPar2 <- function(arg) {
 
 fillPeaksChromPar <- function(arg) {
 
-   require(coleXcms) ##Modified!!
+   require(podium) ##Modified!!
 
     params <- arg$params
     myID <- arg$id
@@ -426,7 +426,7 @@ fillPeaksChromPar <- function(arg) {
 
 fillPeaksChromPar2 <- function(arg) {
   
-  require(coleXcms) ##Modified!!
+  require(podium) ##Modified!!
   
   params <- arg$params
   myID <- arg$id

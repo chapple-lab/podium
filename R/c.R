@@ -11,7 +11,7 @@ profMaxIdx <- function(x, y, num, xstart = min(x), xend = max(x),
        as.double(xend),
        as.integer(num),
        out = integer(num),
-       DUP = FALSE, PACKAGE = "coleXcms")$out
+       DUP = FALSE, PACKAGE = "podium")$out
 }
 
 profMaxIdxM <- function(x, y, zidx, num, xstart = min(x), xend = max(x),
@@ -32,7 +32,7 @@ profMaxIdxM <- function(x, y, zidx, num, xstart = min(x), xend = max(x),
        ## sometimes, the return value is not perfectly zeroes (NA's in FFC)
        ##out = integerMatrix(num, length(zidx)),
        out = matrix(as.integer(0), num, length(zidx)),
-       NAOK = NAOK, DUP = FALSE, PACKAGE = "coleXcms")$out
+       NAOK = NAOK, DUP = FALSE, PACKAGE = "podium")$out
 }
 
 profBin <- function(x, y, num, xstart = min(x), xend = max(x),
@@ -48,7 +48,7 @@ profBin <- function(x, y, num, xstart = min(x), xend = max(x),
        as.double(xend),
        as.integer(num),
        out = double(num),
-       DUP = FALSE, PACKAGE = "coleXcms")$out
+       DUP = FALSE, PACKAGE = "podium")$out
 }
 
 profBinM <- function(x, y, zidx, num, xstart = min(x), xend = max(x),
@@ -66,7 +66,7 @@ profBinM <- function(x, y, zidx, num, xstart = min(x), xend = max(x),
        as.double(xend),
        as.integer(num),
        out = doubleMatrix(num, length(zidx)),
-       NAOK = NAOK, DUP = FALSE, PACKAGE = "coleXcms")$out
+       NAOK = NAOK, DUP = FALSE, PACKAGE = "podium")$out
 }
 
 profBinLin <- function(x, y, num, xstart = min(x), xend = max(x),
@@ -82,7 +82,7 @@ profBinLin <- function(x, y, num, xstart = min(x), xend = max(x),
        as.double(xend),
        as.integer(num),
        out = double(num),
-       DUP = FALSE, PACKAGE = "coleXcms")$out
+       DUP = FALSE, PACKAGE = "podium")$out
 }
 
 profBinLinM <- function(x, y, zidx, num, xstart = min(x), xend = max(x),
@@ -100,7 +100,7 @@ profBinLinM <- function(x, y, zidx, num, xstart = min(x), xend = max(x),
        as.double(xend),
        as.integer(num),
        out = doubleMatrix(num, length(zidx)),
-       NAOK = NAOK, DUP = FALSE, PACKAGE = "coleXcms")$out
+       NAOK = NAOK, DUP = FALSE, PACKAGE = "podium")$out
 }
 
 profBinLinBase <- function(x, y, num, xstart = min(x), xend = max(x),
@@ -127,7 +127,7 @@ profBinLinBase <- function(x, y, num, xstart = min(x), xend = max(x),
        as.double(xend),
        as.integer(num),
        out = double(num),
-       DUP = FALSE, PACKAGE = "coleXcms")$out
+       DUP = FALSE, PACKAGE = "podium")$out
 }
 
 profBinLinBaseM <- function(x, y, zidx, num, xstart = min(x), xend = max(x),
@@ -156,7 +156,7 @@ profBinLinBaseM <- function(x, y, zidx, num, xstart = min(x), xend = max(x),
        as.double(xend),
        as.integer(num),
        out = doubleMatrix(num, length(zidx)),
-       NAOK = NAOK, DUP = FALSE, PACKAGE = "coleXcms")$out
+       NAOK = NAOK, DUP = FALSE, PACKAGE = "podium")$out
 }
 
 profIntLin <- function(x, y, num, xstart = min(x), xend = max(x),
@@ -172,7 +172,7 @@ profIntLin <- function(x, y, num, xstart = min(x), xend = max(x),
        as.double(xend),
        as.integer(num),
        out = double(num),
-       DUP = FALSE, PACKAGE = "coleXcms")$out
+       DUP = FALSE, PACKAGE = "podium")$out
 }
 
 profIntLinM <- function(x, y, zidx, num, xstart = min(x), xend = max(x),
@@ -190,7 +190,7 @@ profIntLinM <- function(x, y, zidx, num, xstart = min(x), xend = max(x),
        as.double(xend),
        as.integer(num),
        out = doubleMatrix(num, length(zidx)),
-       NAOK = NAOK, DUP = FALSE, PACKAGE = "coleXcms")$out
+       NAOK = NAOK, DUP = FALSE, PACKAGE = "podium")$out
 }
 
 medianFilter <- function(x, mrad, nrad) {
@@ -208,7 +208,7 @@ medianFilter <- function(x, mrad, nrad) {
            as.integer(mrad),
            as.integer(nrad),
            out = doubleMatrix(dimx[1], dimx[2]),
-           DUP = FALSE, PACKAGE = "coleXcms")$out
+           DUP = FALSE, PACKAGE = "podium")$out
     }
 }
 
@@ -221,7 +221,7 @@ descendZero <- function(y, istart = which.max(y)) {
               as.integer(istart-1),
               ilower = integer(1),
               iupper = integer(1),
-              DUP = FALSE, PACKAGE = "coleXcms")[4:5]) + 1
+              DUP = FALSE, PACKAGE = "podium")[4:5]) + 1
 }
 
 descendValue <- function(y, value, istart = which.max(y)) {
@@ -234,7 +234,7 @@ descendValue <- function(y, value, istart = which.max(y)) {
               as.double(value),
               ilower = integer(1),
               iupper = integer(1),
-              DUP = FALSE, PACKAGE = "coleXcms")[5:6]) + 1
+              DUP = FALSE, PACKAGE = "podium")[5:6]) + 1
 }
 
 descendMin <- function(y, istart = which.max(y)) {
@@ -246,7 +246,7 @@ descendMin <- function(y, istart = which.max(y)) {
               as.integer(istart-1),
               ilower = integer(1),
               iupper = integer(1),
-              DUP = FALSE, PACKAGE = "coleXcms")[4:5]) + 1
+              DUP = FALSE, PACKAGE = "podium")[4:5]) + 1
 }
 
 findEqualGreaterM <- function(x, values) {
@@ -259,7 +259,7 @@ findEqualGreaterM <- function(x, values) {
        values,
        length(values),
        index = integer(length(values)),
-       DUP = FALSE, PACKAGE = "coleXcms")$index + 1
+       DUP = FALSE, PACKAGE = "podium")$index + 1
 }
 
 findEqualGreater <- function(x, value) {
@@ -270,7 +270,7 @@ findEqualGreater <- function(x, value) {
        length(x),
        as.double(value),
        index = integer(1),
-       DUP = FALSE, PACKAGE = "coleXcms")$index + 1
+       DUP = FALSE, PACKAGE = "podium")$index + 1
 }
 
 findEqualLess <- function(x, value) {
@@ -281,7 +281,7 @@ findEqualLess <- function(x, value) {
        length(x),
        as.double(value),
        index = integer(1),
-       DUP = FALSE, PACKAGE = "coleXcms")$index + 1
+       DUP = FALSE, PACKAGE = "podium")$index + 1
 }
 
 findRange <- function(x, values, NAOK = FALSE) {
@@ -292,13 +292,13 @@ findRange <- function(x, values, NAOK = FALSE) {
                 length(x),
                 as.double(values[1]),
                 integer(1),
-                NAOK = NAOK, DUP = FALSE, PACKAGE = "coleXcms")[[4]]
+                NAOK = NAOK, DUP = FALSE, PACKAGE = "podium")[[4]]
     end <- .C("FindEqualLess",
               x,
               length(x),
               as.double(values[2]),
               integer(1),
-              NAOK = NAOK, DUP = FALSE, PACKAGE = "coleXcms")[[4]]
+              NAOK = NAOK, DUP = FALSE, PACKAGE = "podium")[[4]]
     c(start, end) + 1
 }
 
@@ -318,7 +318,7 @@ colMax <- function (x, na.rm = FALSE, dims = 1) {
             as.integer(n),
             as.integer(prod(dn)),
             double(prod(dn)),
-            DUP = FALSE, PACKAGE = "coleXcms")[[4]]
+            DUP = FALSE, PACKAGE = "podium")[[4]]
     if (length(dn) > 1) {
         dim(z) <- dn
         dimnames(z) <- dimnames(x)[-(1:dims)]
@@ -343,7 +343,7 @@ rowMax <- function (x, na.rm = FALSE, dims = 1) {
             as.integer(prod(dn)),
             as.integer(p),
             double(prod(dn)),
-            DUP = FALSE, PACKAGE = "coleXcms")[[4]]
+            DUP = FALSE, PACKAGE = "podium")[[4]]
     if (length(dn) > 1) {
         dim(z) <- dn
         dimnames(z) <- dimnames(x)[1:dims]
@@ -368,7 +368,7 @@ which.colMax <- function (x, na.rm = FALSE, dims = 1) {
             as.integer(n),
             as.integer(prod(dn)),
             integer(prod(dn)),
-            DUP = FALSE, PACKAGE = "coleXcms")[[4]]
+            DUP = FALSE, PACKAGE = "podium")[[4]]
     if (length(dn) > 1) {
         dim(z) <- dn
         dimnames(z) <- dimnames(x)[-(1:dims)]
@@ -393,7 +393,7 @@ which.rowMax <- function (x, na.rm = FALSE, dims = 1) {
             as.integer(prod(dn)),
             as.integer(p),
             integer(prod(dn)),
-            DUP = FALSE, PACKAGE = "coleXcms")[[4]]
+            DUP = FALSE, PACKAGE = "podium")[[4]]
     if (length(dn) > 1) {
         dim(z) <- dn
         dimnames(z) <- dimnames(x)[1:dims]
@@ -422,7 +422,7 @@ rectUnique <- function(m, order = seq(length = nrow(m)), xdiff = 0, ydiff = 0) {
        as.double(xdiff),
        as.double(ydiff),
        logical(nrow(m)),
-       DUP = FALSE, PACKAGE = "coleXcms")[[7]]
+       DUP = FALSE, PACKAGE = "podium")[[7]]
 }
 
 doubleMatrix <- function(nrow = 0, ncol = 0) {
@@ -430,7 +430,7 @@ doubleMatrix <- function(nrow = 0, ncol = 0) {
     .Call("DoubleMatrix",
           as.integer(nrow),
           as.integer(ncol),
-          PACKAGE = "coleXcms")
+          PACKAGE = "podium")
 }
 
 integerMatrix <- function(nrow = 0, ncol = 0) {
@@ -438,7 +438,7 @@ integerMatrix <- function(nrow = 0, ncol = 0) {
     .Call("IntegerMatrix",
           as.integer(nrow),
           as.integer(ncol),
-          PACKAGE = "coleXcms")
+          PACKAGE = "podium")
 }
 
 logicalMatrix <- function(nrow = 0, ncol = 0) {
@@ -446,7 +446,7 @@ logicalMatrix <- function(nrow = 0, ncol = 0) {
     .Call("LogicalMatrix",
           as.integer(nrow),
           as.integer(ncol),
-          PACKAGE = "coleXcms")
+          PACKAGE = "podium")
 }
 
 continuousPtsAboveThreshold <- function(y, threshold, num, istart = 1) {
@@ -458,7 +458,7 @@ continuousPtsAboveThreshold <- function(y, threshold, num, istart = 1) {
            threshold = as.double(threshold),
            num = as.integer(num),
            n = integer(1),
-           DUP = FALSE, PACKAGE = "coleXcms")$n > 0) TRUE else FALSE
+           DUP = FALSE, PACKAGE = "podium")$n > 0) TRUE else FALSE
 }
 
 continuousPtsAboveThresholdIdx <- function(y, threshold, num, istart = 1) {
@@ -470,7 +470,7 @@ continuousPtsAboveThresholdIdx <- function(y, threshold, num, istart = 1) {
                   threshold = as.double(threshold),
                   num = as.integer(num),
                   n = integer(length(y)),
-                  DUP = FALSE, PACKAGE = "coleXcms")$n)
+                  DUP = FALSE, PACKAGE = "podium")$n)
 }
 
 findEqualGreaterUnsorted <- function(x, value) {
@@ -481,5 +481,5 @@ findEqualGreaterUnsorted <- function(x, value) {
        length(x),
        as.double(value),
        index = integer(1),
-       DUP = FALSE, PACKAGE = "coleXcms")$index + 1
+       DUP = FALSE, PACKAGE = "podium")$index + 1
 }

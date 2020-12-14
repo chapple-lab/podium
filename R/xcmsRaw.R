@@ -1748,7 +1748,7 @@ setMethod("rawEIC", "xcmsRaw", function(object,
     if (!is.double(object@env$intensity)) object@env$intensity <- as.double(object@env$intensity)
     if (!is.integer(object@scanindex)) object@scanindex <- as.integer(object@scanindex)
 
-    .Call("getEIC",object@env$mz,object@env$intensity,object@scanindex,as.double(mzrange),as.integer(scanrange),as.integer(length(object@scantime)), PACKAGE ='coleXcms' )
+    .Call("getEIC",object@env$mz,object@env$intensity,object@scanindex,as.double(mzrange),as.integer(scanrange),as.integer(length(object@scantime)), PACKAGE ='podium' )
 })
 
 setGeneric("plotEIC", function(object, ...) standardGeneric("plotEIC"))
@@ -1791,7 +1791,7 @@ setMethod("rawMZ", "xcmsRaw", function(object,
     if (!is.double(object@env$intensity)) object@env$intensity <- as.double(object@env$intensity)
     if (!is.integer(object@scanindex)) object@scanindex <- as.integer(object@scanindex)
 
-    .Call("getMZ",object@env$mz,object@env$intensity,object@scanindex,as.double(mzrange),as.integer(scanrange),as.integer(length(object@scantime)), PACKAGE ='coleXcms' )
+    .Call("getMZ",object@env$mz,object@env$intensity,object@scanindex,as.double(mzrange),as.integer(scanrange),as.integer(length(object@scantime)), PACKAGE ='podium' )
 })
 
 
@@ -1809,7 +1809,7 @@ setMethod("findmzROI", "xcmsRaw", function(object, mzrange=c(0.0,0.0), scanrange
 
     .Call("findmzROI", object@env$mz,object@env$intensity,object@scanindex, as.double(mzrange),
           as.integer(scanrange), as.integer(length(object@scantime)),
-          as.double(dev), as.integer(minCentroids), as.integer(prefilter), as.integer(noise), PACKAGE ='coleXcms' )
+          as.double(dev), as.integer(minCentroids), as.integer(prefilter), as.integer(noise), PACKAGE ='podium' )
 })
 
 setGeneric("findKalmanROI", function(object, ...) standardGeneric("findKalmanROI"))
@@ -1831,7 +1831,7 @@ setMethod("findKalmanROI", "xcmsRaw", function(object, mzrange=c(0.0,0.0),
     .Call("massifquant", object@env$mz,object@env$intensity,object@scanindex, object@scantime,
           as.double(mzrange), as.integer(scanrange), as.integer(length(object@scantime)),
           as.double(minIntensity),as.integer(minCentroids),as.double(consecMissedLim),
-          as.double(ppm), as.double(criticalVal), as.integer(segs), as.integer(scanBack), PACKAGE ='coleXcms' )
+          as.double(ppm), as.double(criticalVal), as.integer(segs), as.integer(scanBack), PACKAGE ='podium' )
 })
 
 setGeneric("findPeaks.massifquant", function(object, ...) standardGeneric("findPeaks.massifquant"))

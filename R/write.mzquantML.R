@@ -13,7 +13,7 @@ setMethod("write.mzQuantML", "xcmsSet", function(object, filename) {
 })
 
 verify.mzQuantML <- function(filename,
-                             xsdfilename=system.file('unitTests/mzQuantML_1_0_0.xsd', package = "coleXcms")) {
+                             xsdfilename=system.file('unitTests/mzQuantML_1_0_0.xsd', package = "podium")) {
     xsd = xmlTreeParse(xsdfilename, isSchema =TRUE, useInternal = TRUE)
     doc = xmlInternalTreeParse(filename)
     xmlSchemaValidate(xsd, doc)    
@@ -89,10 +89,10 @@ buildSoftwareList <- function() {
                .children=list(
                    newXMLNode("Software",
                               attrs=c(
-                                  id="coleXcms",
-                                  version=packageVersion("coleXcms")),
+                                  id="podium",
+                                  version=packageVersion("podium")),
                               .children=buildCvParams(
-                                  list(c(accession="MS:1001830", cvRef="PSI-MS", name="coleXcms")))
+                                  list(c(accession="MS:1001830", cvRef="PSI-MS", name="podium")))
                               )))
 }
 
@@ -100,7 +100,7 @@ buildDataProcessingList <- function() {
     newXMLNode("DataProcessingList",
                .children=newXMLNode("DataProcessing",
                    attrs=c(order="1",
-                       software_ref="coleXcms", id="DP1"),
+                       software_ref="podium", id="DP1"),
                    .children=newXMLNode("ProcessingMethod",
                    attrs=c(order="1"))))
 }
@@ -249,7 +249,7 @@ buildMzq <- function(xs) {
     mzq = xmlTree(tag="MzQuantML",
         attrs=c(
             version=mzqVersion,
-            id="mzq-generated-from-coleXcms",
+            id="mzq-generated-from-podium",
             creationDate="2012-11-26T15:13:08.330Z",
             "xsi:schemaLocation"=schemaLocation),
         namespaces = c(

@@ -15,5 +15,5 @@
 .onUnload <- function(libpath) {
     mzR:::rampCloseAll()
     #if (is.loaded("NetCDFOpen"))
-        library.dynam.unload("coleXcms", libpath)
+        library.dynam.unload("podium", libpath)
 }
