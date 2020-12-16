@@ -1,4 +1,5 @@
 ^\.git$
+^\.github$
 ^buildignore$
 ^.*\.Rproj$
 ^\.Rproj\.user$
