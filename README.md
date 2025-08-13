@@ -15,4 +15,4 @@ They have been instead grouped in the [podiumMethods](https://github.com/chapple
 Read our Plant Cell paper here: https://doi.org/10.1093/plcell/koaa046 
 
 ## Installation and Documentation
-Installation and setup instructions as well as full documentation can be found [here](https://github.com/chapple-lab/podium/blob/master/buildignore/Supplement_and_Instruction_Manual.pdf).  You can download the latest release of PODIUM [here](https://github.com/chapple-lab/podium/releases/download/initial_pre_release/podium_1.2.0.tar.gz) and PODIUMmethods [here](https://github.com/chapple-lab/podiumMethods/raw/master/buildignore/sources/podiumMethods_1.2.0.tar.gz).
+Installation and setup instructions as well as full documentation can be found [here](https://github.com/chapple-lab/podium/blob/master/buildignore/PODIUM_User_Manual.pdf).  You can download the latest release of PODIUM [here](https://github.com/chapple-lab/podium/releases/download/initial_pre_release/podium_1.2.0.tar.gz) and PODIUMmethods [here](https://github.com/chapple-lab/podiumMethods/raw/master/buildignore/sources/podiumMethods_1.2.0.tar.gz).
